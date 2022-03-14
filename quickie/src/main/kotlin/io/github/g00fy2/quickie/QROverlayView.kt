@@ -88,10 +88,20 @@ internal class QROverlayView @JvmOverloads constructor(
     super.onDraw(canvas)
   }
 
-  fun setCustomText(stringRes: Int) {
+  /*fun setCustomText(stringRes: Int) {
     if (stringRes != 0) {
       try {
         binding.titleTextView.setText(stringRes)
+      } catch (ignore: NotFoundException) {
+        // string resource not found
+      }
+    }
+  }*/
+
+  fun setCustomText(stringRes: String) {
+    if (stringRes != "") {
+      try {
+        binding.titleTextView.text = stringRes
       } catch (ignore: NotFoundException) {
         // string resource not found
       }

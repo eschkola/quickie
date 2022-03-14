@@ -43,6 +43,11 @@ subprojects {
     }
   }
 }
+buildscript {
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
+    }
+}
 
 tasks.dependencyUpdates.configure {
   gradleReleaseChannel = "current"

@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 internal class ParcelableScannerConfig(
   val formats: IntArray,
-  val stringRes: Int,
+  val stringRes: String,
   val drawableRes: Int?,
   val hapticFeedback: Boolean,
   val showTorchToggle: Boolean,
